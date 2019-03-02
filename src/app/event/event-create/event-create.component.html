@@ -1,8 +1,49 @@
-<div>
-  <h1 style="margin: 20px">
-    EVENT CREATION
+<div class ="give-margin">
+  <h1>
+    CREATE AN EVENT
   </h1>
+  <mat-form-field style="width: 300px">
+    <mat-label>Event Name</mat-label>
+    <input matInput placeholder="Enter the name" [(ngModel)]='EventCreateComponent'/>
+  </mat-form-field>
+  <br>
+  <mat-form-field style="width: 300px">
+      <mat-label>Organizer</mat-label>
+      <input matInput placeholder="Who is holding this?">
+  </mat-form-field>
+  <br>
   <mat-form-field>
-    <input matInput placeholder="Event Name">
+      <mat-select placeholder="Event Type">
+        <mat-option value="option">Hackthon</mat-option>
+        <mat-option value="option1">Party</mat-option>
+        <mat-option value="option3">Others</mat-option>
+      </mat-select>
+  </mat-form-field>
+  <br>
+  <mat-checkbox>Free Event</mat-checkbox>
+  <br>
+  <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <br>
+  <mat-form-field style="width: 300px">
+      <mat-label>Place</mat-label>
+      <input matInput placeholder="Somewhere in the world">
+  </mat-form-field>
+  <br>
+  <mat-form-field style="width: 150px">
+      <mat-label>Min #of Member</mat-label>
+      <input matInput placeholder="0">
+  </mat-form-field>
+  <mat-form-field style="width: 150px">
+      <mat-label>Max #of Member</mat-label>
+      <input matInput placeholder="100">
+  </mat-form-field>
+  <br>
+  <mat-form-field style="height: 200px; width: 300px">
+    <mat-label>Event Description</mat-label>
+    <textarea matInput placeholder="THIS EVENT IS COOOOOOOL!"></textarea>
   </mat-form-field>
 </div>
