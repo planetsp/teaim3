@@ -19,8 +19,6 @@ export class AppComponent {
 
   }
   constructor(db:DatabaseControlService ){
-    console.log('here')
-    db.createEvent(this.event2);
   }
 
 }
