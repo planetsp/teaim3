@@ -9,6 +9,7 @@ import { EventModule } from './event/event.module';
 import { SharedModule } from './shared/shared.module';
 import { NavigationModule } from './navigation/navigation.module';
 import { AppRoutingModule } from './app-routing.module';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AppRoutingModule } from './app-routing.module';
     EventModule,
     SharedModule,
     NavigationModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
