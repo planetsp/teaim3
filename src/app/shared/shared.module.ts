@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule }  from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule} from '@angular/router';
+import {MatDialogModule} from '@angular/material/dialog'
 @NgModule({
   declarations: [],
   exports: [
@@ -32,6 +33,7 @@ import { RouterModule} from '@angular/router';
     BrowserModule,
     HttpClientModule,
     RouterModule,
+    MatDialogModule,
   ]
 })
 export class SharedModule { }
