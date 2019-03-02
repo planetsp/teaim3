@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Event, Team, DatabaseControlService } from '../../core/database-control.service'
 import { homedir } from 'os';
-
+import {Router} from '@angular/router'
 @Component({
   selector: 'app-event-create',
   templateUrl: './event-create.component.html',
@@ -19,12 +19,13 @@ export class EventCreateComponent implements OnInit {
     teams: null,
     description:'',
   }
-  constructor(public db:DatabaseControlService) { 
+  constructor(public db:DatabaseControlService, public router: Router) { 
 
   }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+      
+    }
 
   display(){
     console.log(this.currEvent.name);
@@ -35,7 +36,7 @@ export class EventCreateComponent implements OnInit {
   }
 
   homeback(){
-    
+    this.router.navigate(['/']);
   }
 
 }
