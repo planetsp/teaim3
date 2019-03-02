@@ -1,9 +1,9 @@
 
-<h1 id="head">
-    CREATE AN EVENT {{currEvent.minTeamMembers}}{{currEvent.maxTeamMembers}}
-</h1>
+
 <div class ="give-margin">
-    
+    <h1>
+        CREATE AN EVENT
+    </h1>
   <mat-form-field style="width: 300px">
     <mat-label>Event Name</mat-label>
     <input matInput placeholder="Enter the name" [(ngModel)]='currEvent.name'/>
@@ -25,7 +25,7 @@
   <mat-checkbox>Free Event</mat-checkbox>
   <br>
   <mat-form-field>
-      <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date" [(ngModel)]='currEvent.time'/>
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
@@ -46,10 +46,10 @@
   <br>
   <mat-form-field style="height: 100px; width: 300px">
     <mat-label>Event Description</mat-label>
-    <textarea matInput placeholder="THIS EVENT IS COOOOOOOL!"></textarea>
+    <input matInput placeholder="THIS EVENT IS COOOOOOOL!"[(ngModel)]='currEvent.description'/>
   </mat-form-field>
   <br>
-  <button mat-button style="background-color:blanchedalmond">Save</button>
+  <button mat-button style="background-color:blanchedalmond" (click)="submit()">Save</button>
   &nbsp;
-  <button mat-button style="background-color:blanchedalmond">Cancel</button>
+  <button mat-button style="background-color:blanchedalmond" (click)="homeback()">Cancel</button>
 </div>
