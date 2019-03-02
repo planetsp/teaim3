@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { NavigationModule } from './navigation/navigation.module';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
