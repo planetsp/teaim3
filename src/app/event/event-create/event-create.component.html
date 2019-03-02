@@ -1,6 +1,6 @@
 <div class ="give-margin">
   <h1>
-  CREATE AN EVENT {{currEvent.name}}
+  CREATE AN EVENT {{currEvent.minTeamMembers}}{{currEvent.maxTeamMembers}}
   </h1>
   <mat-form-field style="width: 300px">
     <mat-label>Event Name</mat-label>
@@ -9,7 +9,7 @@
   <br>
   <mat-form-field style="width: 300px">
       <mat-label>Organizer</mat-label>
-      <input matInput placeholder="Who is holding this?">
+      <input matInput placeholder="Who is holding this?" [(ngModel)]='currEvent.organizer'/>
   </mat-form-field>
   <br>
   <mat-form-field>
@@ -30,16 +30,16 @@
   <br>
   <mat-form-field style="width: 300px">
       <mat-label>Place</mat-label>
-      <input matInput placeholder="Somewhere in the world">
+      <input matInput placeholder="Somewhere in the world" [(ngModel)]='currEvent.place'/>
   </mat-form-field>
   <br>
   <mat-form-field style="width: 150px">
       <mat-label>Min #of Member</mat-label>
-      <input matInput placeholder="0">
+      <input matInput placeholder="0" [(ngModel)]='currEvent.minTeamMembers'/>
   </mat-form-field>
   <mat-form-field style="width: 150px">
       <mat-label>Max #of Member</mat-label>
-      <input matInput placeholder="100">
+      <input matInput placeholder="100" [(ngModel)]='currEvent.maxTeamMembers'/>
   </mat-form-field>
   <br>
   <mat-form-field style="height: 100px; width: 300px">
