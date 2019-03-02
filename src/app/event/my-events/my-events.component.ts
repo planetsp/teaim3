@@ -2,6 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { DatabaseControlService, Event } from '../../core/database-control.service';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import { TeamViewComponent } from 'src/app/team/team-view/team-view.component';
+import { Router } from '@angular/router';
 export interface DialogData {
   animal: string;
   name: string;
@@ -18,7 +19,7 @@ export class MyEventsComponent implements OnInit {
   animal: string;
   name: string;
 
-  constructor(public db: DatabaseControlService, public dialog: MatDialog) { }
+  constructor(public db: DatabaseControlService, public dialog: MatDialog, public router: Router) { }
   events: Event[];
 
   ngOnInit() {
@@ -35,6 +36,12 @@ export class MyEventsComponent implements OnInit {
   }
   delete(eventName: string){
     this.db.deleteEvent(eventName);
+  }
+  viewTeams(eventName:string){
+    this.router.navigate(['/event', eventName])
+  }
+  createTeam(eventName:string){
+    this.router.navigate(['/event', eventName])
   }
   openDialog(): void {
     const dialogRef = this.dialog.open(TeamViewComponent, {
