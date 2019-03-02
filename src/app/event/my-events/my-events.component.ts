@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DatabaseControlService, Event } from '../../core/database-control.service';
 
 @Component({
   selector: 'app-my-events',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyEventsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public db: DatabaseControlService) { }
+  events: Event[];
 
   ngOnInit() {
+    this.db.getEvents().subscribe(res => {
+      this.events = res.map(e => {
+        console.log(e.payload.doc.data())
+        return {
+          id: e.payload.doc.id,
+          ...e.payload.doc.data()
+        } as Event
+      })
+    })
+    console.log(this.events)
   }
 
 }
