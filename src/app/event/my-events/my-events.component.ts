@@ -1,14 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { DatabaseControlService, Event } from '../../core/database-control.service';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+export interface DialogData {
+  animal: string;
+  name: string;
+}
 
 @Component({
   selector: 'app-my-events',
   templateUrl: './my-events.component.html',
   styleUrls: ['./my-events.component.css']
 })
+
 export class MyEventsComponent implements OnInit {
 
-  constructor(public db: DatabaseControlService) { }
+  animal: string;
+  name: string;
+
+  constructor(public db: DatabaseControlService, public dialog: MatDialog) { }
   events: Event[];
 
   ngOnInit() {
@@ -25,6 +34,17 @@ export class MyEventsComponent implements OnInit {
   }
   delete(eventName: string){
     this.db.deleteEvent(eventName);
+  }
+  openDialog(): void {
+    const dialogRef = this.dialog.open(MyEventsComponent, {
+      width: '250px',
+      data: {name: this.name, animal: this.animal}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.animal = result;
+    });
   }
 
 }

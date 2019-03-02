@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from '../app-routing.module';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatFormFieldModule, MatSelectModule, MatInputModule, MatNativeDateModule } from '@angular/material';
+import { MatDialog, MatDialogRef, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatFormFieldModule, MatSelectModule, MatInputModule, MatNativeDateModule } from '@angular/material';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSliderModule } from '@angular/material/slider';
@@ -35,7 +35,7 @@ import {MatCardModule} from '@angular/material/card';
     HttpClientModule,
     RouterModule,
     MatDialogModule,
-    MatCardModule
+    MatCardModule,
   ]
 })
 export class SharedModule { }
