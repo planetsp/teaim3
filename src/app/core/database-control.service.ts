@@ -14,13 +14,13 @@ export interface Event {
 export class DatabaseControlService {
 
   constructor() { }
-  public createTeam(){
-
+  public createTeam(team: Team, event: Event){
+    //Post team under some event
   }
   /**
    * name
    */
-  public createEvent() {
+  public createEvent(event: Event) {
     
   }
 }
