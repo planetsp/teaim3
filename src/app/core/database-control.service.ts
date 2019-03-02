@@ -18,7 +18,7 @@ export interface Event {
   minTeamMembers: number;
   maxTeamMembers: number;
   teams: Array<Team>;
-  description: string;
+  description:string;
 }
 @Injectable({
   providedIn: 'root'
@@ -28,10 +28,15 @@ export class DatabaseControlService {
   constructor(private afs: AngularFirestore) { }
   public createTeam(team: Team, event: Event){
     event.teams.push(team);
-    this.deleteEvent(event.id);
-    this.afs.doc('events/' + event.id).update(event);
+    var eventRef = this.afs.collection('events').doc(event.name);
+    var arrayUnion = eventRef.update({
+      teams: event.teams
+    })
   }
   public getTeam(teamID: string, eventID: string){
+
+  }
+  public getMyTeams(){
 
   }
   
