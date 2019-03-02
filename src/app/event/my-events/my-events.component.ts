@@ -41,7 +41,7 @@ export class MyEventsComponent implements OnInit {
     this.router.navigate(['/event', eventName])
   }
   createTeam(eventName:string){
-    this.router.navigate(['/event', eventName])
+    this.router.navigateByUrl("/event/:eventName/createteam")
   }
   openDialog(): void {
     const dialogRef = this.dialog.open(TeamViewComponent, {
