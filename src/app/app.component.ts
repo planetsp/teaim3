@@ -16,6 +16,7 @@ export class AppComponent {
     minTeamMembers: 0,
     maxTeamMembers: 100, 
     place: 'string',
+    description: ''
 
   }
   constructor(db:DatabaseControlService ){

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Event, Team, DatabaseControlService } from '../../core/database-control.service'
-import { homedir } from 'os';
 import {Router} from '@angular/router'
 @Component({
   selector: 'app-event-create',
