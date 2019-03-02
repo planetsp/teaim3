@@ -11,8 +11,8 @@ export class EventCreateComponent implements OnInit {
   currEvent: Event = {
     name: '',
     organizer: '',
-    minTeamMembers: 0,
-    maxTeamMembers: 100,
+    minTeamMembers: null,
+    maxTeamMembers: null,
     time: null,
     place: '',
     teams: null,
