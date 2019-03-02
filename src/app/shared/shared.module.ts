@@ -11,6 +11,7 @@ import { BrowserModule }  from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule} from '@angular/router';
 import {MatDialogModule} from '@angular/material/dialog'
+import {MatCardModule} from '@angular/material/card'; 
 @NgModule({
   declarations: [],
   exports: [
@@ -34,6 +35,7 @@ import {MatDialogModule} from '@angular/material/dialog'
     HttpClientModule,
     RouterModule,
     MatDialogModule,
+    MatCardModule
   ]
 })
 export class SharedModule { }
