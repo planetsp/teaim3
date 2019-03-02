@@ -37,9 +37,6 @@ export class AppComponent {
         } as Event
       })
     })
-    events.forEach(check =>{
-      console.log(check);
-    })
   }
   
 
