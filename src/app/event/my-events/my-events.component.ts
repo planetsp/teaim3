@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { DatabaseControlService, Event } from '../../core/database-control.service';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import { TeamViewComponent } from 'src/app/team/team-view/team-view.component';
 export interface DialogData {
   animal: string;
   name: string;
@@ -36,7 +37,7 @@ export class MyEventsComponent implements OnInit {
     this.db.deleteEvent(eventName);
   }
   openDialog(): void {
-    const dialogRef = this.dialog.open(MyEventsComponent, {
+    const dialogRef = this.dialog.open(TeamViewComponent, {
       width: '250px',
       data: {name: this.name, animal: this.animal}
     });

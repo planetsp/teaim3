@@ -11,6 +11,7 @@ import { NavigationModule } from './navigation/navigation.module';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { AngularFireModule } from '@angular/fire';
+import { TeamViewComponent } from './team/team-view/team-view.component';
 var config = {
   apiKey: "AIzaSyAI72fYb2Y-eC9VLoKA7gKEon_zOARKwFA",
   authDomain: "teaim-233300.firebaseapp.com",
@@ -36,6 +37,7 @@ var config = {
     AngularFireModule.initializeApp(config),
     CoreModule,
   ],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent]
 })

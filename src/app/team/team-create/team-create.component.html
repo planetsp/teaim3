@@ -1,0 +1,41 @@
+
+
+<div class ="give-margin">
+  <h1>
+      CREATE A TEAM
+  </h1>
+<mat-form-field style="width: 300px">
+  <mat-label>Team Name</mat-label>
+  <input matInput placeholder="Enter the name" [(ngModel)]='currEvent.name'/>
+</mat-form-field>
+<br>
+<mat-form-field>
+    <mat-select placeholder="Team Level">
+      <mat-option value="option">Basic</mat-option>
+      <mat-option value="option1">Intermediate</mat-option>
+      <mat-option value="option3">Advanced</mat-option>
+    </mat-select>
+</mat-form-field>
+<br>
+<mat-checkbox>Free Event</mat-checkbox>
+<br>
+<mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Choose a date" [(ngModel)]='currEvent.time'/>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+<br>
+<mat-form-field style="width: 300px">
+    <mat-label>Hometown</mat-label>
+    <input matInput placeholder="Somewhere in the world" [(ngModel)]='currEvent.place'/>
+</mat-form-field>
+<br>
+<mat-form-field style="height: 100px; width: 300px">
+  <mat-label>Team Description</mat-label>
+  <input matInput placeholder="THIS EVENT IS COOOOOOOL!"[(ngModel)]='currEvent.description'/>
+</mat-form-field>
+<br>
+<button mat-button style="background-color:blanchedalmond" (click)="submit()" (click)="gotoevent()">Create</button>
+&nbsp;
+<button mat-button style="background-color:blanchedalmond" (click)="homeback()">Cancel</button>
+</div>
