@@ -7,6 +7,9 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSliderModule} from '@angular/material/slider';
 import { FormsModule } from '@angular/forms';
+import { BrowserModule }  from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [],
   exports: [
@@ -26,6 +29,8 @@ import { FormsModule } from '@angular/forms';
     MatCheckboxModule,
     MatSliderModule,
     FormsModule,
+    BrowserModule,
+    HttpClientModule,
   ]
 })
 export class SharedModule { }
