@@ -4,8 +4,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProfileViewComponent } from './user/profile-view/profile-view.component';
 import { EventCreateComponent } from './event/event-create/event-create.component';
 import { MyEventsComponent } from './event/my-events/my-events.component';
+import { HomepageComponent } from './navigation/homepage/homepage.component';
 const routes: Routes = [
-  { path: '', component: ProfileViewComponent},
+  { path: '', component:HomepageComponent},
+  { path: 'profile', component: ProfileViewComponent},
   { path: 'newevent', component: EventCreateComponent},
   { path: 'events', component: MyEventsComponent},
 
