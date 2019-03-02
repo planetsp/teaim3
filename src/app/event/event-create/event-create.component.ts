@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Event, Team, DatabaseControlService } from '../../core/database-control.service'
+import { homedir } from 'os';
 
 @Component({
   selector: 'app-event-create',
@@ -31,6 +32,10 @@ export class EventCreateComponent implements OnInit {
 
   submit(){
     this.db.createEvent(this.currEvent);
+  }
+
+  homeback(){
+    
   }
 
 }

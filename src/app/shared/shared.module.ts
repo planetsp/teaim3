@@ -9,7 +9,7 @@ import {MatSliderModule} from '@angular/material/slider';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule }  from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
+import { RouterModule} from '@angular/router';
 @NgModule({
   declarations: [],
   exports: [
@@ -31,6 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     BrowserModule,
     HttpClientModule,
+    RouterModule,
   ]
 })
 export class SharedModule { }
