@@ -23,5 +23,8 @@ export class MyEventsComponent implements OnInit {
     })
     console.log(this.events)
   }
+  delete(eventName: string){
+    this.db.deleteEvent(eventName);
+  }
 
 }

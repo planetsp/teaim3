@@ -38,4 +38,7 @@ export class EventCreateComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
+  gotoevent(){
+    this.router.navigate(['/events']);
+  }
 }

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
   <div class="give-margin">
   <h1 id="head">
@@ -9,4 +9,21 @@
 <div class="give-margin2">
 <p>Event Name<p id="tempo"></p>  Organizer <p id="tempo2"></p>  Event Type<p id="tempo3"></p>
 </div>
-</html>
+</html> -->
+
+<mat-card *ngFor="let event of events"class ="example-card">
+  <mat-card-header>
+    <mat-card-title>{{event.name}}</mat-card-title>
+    <mat-card-subtitle>{{event.time}}</mat-card-subtitle>
+    <mat-card-subtitle>{{event.place}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      {{event.description}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>Teams</button>
+    <button mat-button (click) = "delete(event.name)">Leave Event</button>
+  </mat-card-actions>
+</mat-card>
