@@ -19,6 +19,8 @@ export class AppComponent {
     name: 'test',
     organizer: 'test',
     minTeamMembers: 0,
+    maxTeamMembers: 100, 
+    place: 'string',
     maxTeamMembers: 10, 
     time: null,
     place: null,
