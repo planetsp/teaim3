@@ -22,4 +22,8 @@ export class EventCreateComponent implements OnInit {
   ngOnInit() {
   }
 
+  display(){
+    console.log(this.currEvent.name);
+  }
+
 }
