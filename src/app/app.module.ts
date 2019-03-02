@@ -10,6 +10,15 @@ import { SharedModule } from './shared/shared.module';
 import { NavigationModule } from './navigation/navigation.module';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
+import { AngularFireModule } from '@angular/fire';
+var config = {
+  apiKey: "AIzaSyAI72fYb2Y-eC9VLoKA7gKEon_zOARKwFA",
+  authDomain: "teaim-233300.firebaseapp.com",
+  databaseURL: "https://teaim-233300.firebaseio.com",
+  projectId: "teaim-233300",
+  storageBucket: "teaim-233300.appspot.com",
+  messagingSenderId: "15257677331"
+};
 
 @NgModule({
   declarations: [
@@ -24,7 +33,8 @@ import { CoreModule } from './core/core.module';
     SharedModule,
     NavigationModule,
     AppRoutingModule,
-    CoreModule
+    AngularFireModule.initializeApp(config),
+    CoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
