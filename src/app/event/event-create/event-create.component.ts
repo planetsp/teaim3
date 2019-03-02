@@ -16,6 +16,7 @@ export class EventCreateComponent implements OnInit {
     time: null,
     place: '',
     teams: null,
+    description:'',
   }
   constructor(public db:DatabaseControlService) { 
 

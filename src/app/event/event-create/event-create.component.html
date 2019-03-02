@@ -1,6 +1,6 @@
 <div class ="give-margin">
   <h1>
-  CREATE AN EVENT {{currEvent.minTeamMembers}}{{currEvent.maxTeamMembers}}
+  CREATE AN EVENT
   </h1>
   <mat-form-field style="width: 300px">
     <mat-label>Event Name</mat-label>
@@ -44,7 +44,7 @@
   <br>
   <mat-form-field style="height: 100px; width: 300px">
     <mat-label>Event Description</mat-label>
-    <textarea matInput placeholder="THIS EVENT IS COOOOOOOL!"></textarea>
+    <input matInput placeholder="THIS EVENT IS COOOOOOOL!"[(ngModel)]='currEvent.description'/>
   </mat-form-field>
   <br>
   <button mat-button style="background-color:blanchedalmond">Save</button>

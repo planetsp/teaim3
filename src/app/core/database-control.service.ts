@@ -18,6 +18,7 @@ export interface Event {
   minTeamMembers: number;
   maxTeamMembers: number;
   teams: Array<Team>;
+  description: string;
 }
 @Injectable({
   providedIn: 'root'
